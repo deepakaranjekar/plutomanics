@@ -9,7 +9,7 @@ export class UserService {
     new TradeCallaData(
       'c1',
       'Title 1',
-      'Hold Titan 1140 CE May',
+      'Hold Titan 1140 CE May dfgdfggf dfgggf dfdgdf dfgfd',
       'Keep close to Nature\'s heart... and break clear away, once in awhile and climb a mountain or spend a week in the woods. Wash your spirit clean.',
       'https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2017/11/04133712/waterfall.jpg',
       3,
