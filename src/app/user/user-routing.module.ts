@@ -5,7 +5,7 @@ import { UserPage } from './user.page';
 
 const routes: Routes = [
     {
-        path: 'tabs',
+        path: '',
         component : UserPage,
         children: [
             {
@@ -15,11 +15,11 @@ const routes: Routes = [
                         path: '',
                         loadChildren: './trade-calls/trade-calls.module#TradeCallsPageModule'
                     }
-                    // ,
-                    // {
-                    //     path: ':cardId',
-                    //     loadChildren: './trade-calls/card-detail-view/card-detail-view.module#CardDetailViewPageModule'
-                    // }
+                    ,
+                    {
+                        path: ':cardId',
+                        loadChildren: './trade-calls/card-detail-view/card-detail-view.module#CardDetailViewPageModule'
+                    }
                 ]
             },
             {

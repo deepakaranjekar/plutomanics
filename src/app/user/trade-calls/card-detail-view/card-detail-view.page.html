@@ -1,9 +1,72 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>card_detail_view</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/user/tradeCalls"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ cardDetail?.title }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-grid>
+        <ion-row>
+          <ion-col>
 
+            <ion-card>
+                <ion-card-header>
+                  <ion-row>
+                    <ion-col size="12" no-padding>  
+                        <ion-item no-lines no-padding>
+                          <ion-thumbnail slot="start">
+                            <div class="firstLetter">
+                                {{cardDetail?.title.charAt(0)}}
+                            </div>
+                          </ion-thumbnail>
+                          <ion-label no-lines>
+                            <ion-card-title>{{ cardDetail?.title }}</ion-card-title>
+                            <ion-card-subtitle>{{ cardDetail?.subtitle }}</ion-card-subtitle>
+                          </ion-label>
+                        </ion-item>
+                    </ion-col>
+                  </ion-row>
+
+                </ion-card-header>
+                <ion-card-content>
+                  <div>
+                      <ion-img [src]='cardDetail?.imageUrl'></ion-img>
+                  </div>
+                        
+                  <div class="ion-padding-vertical">
+                      {{ cardDetail?.description}}
+                  </div>
+
+                  <ion-row>
+                      <ion-col size='8' no-padding>
+                          <ion-label class="diplay-inline-block">
+                              <span class="diplay-inline-block vr_align_md">
+                                  <ion-icon class="fav_icon" slot="start" name="star"></ion-icon>
+                              </span>
+                              <span class="icon_lebal">{{ cardDetail?.favoriteCount}}</span>
+                          </ion-label>
+                        
+                            <ion-label class="diplay-inline-block">
+                                <span class="diplay-inline-block" style="padding-right: 5px; vertical-align: middle;">
+                                    <ion-icon class="img-icon" slot="start" name="images"></ion-icon>
+                                </span>
+                                <span class="icon_lebal">
+                                    {{ cardDetail?.imageCount }}
+                                </span>
+                            </ion-label>
+                      </ion-col>
+                      <ion-col size="4" text-right>
+                          <ion-label class="time_label">{{ cardDetail?.time}}</ion-label>
+                      </ion-col>
+                  </ion-row>
+
+                </ion-card-content>
+              </ion-card>
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 </ion-content>

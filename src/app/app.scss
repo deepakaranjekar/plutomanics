@@ -4,3 +4,23 @@
 // styles are for the entire app and not just one component. Additionally, this 
 // file can hold Sass mixins, functions, and placeholder classes to be imported 
 // and used throughout the application.
+
+.firstLetter{
+    background: #bd3030;
+    border-radius: 100%;
+    height: 56px;
+    width: 56px;
+    text-align: center;
+    line-height: 2.2;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.diplay-inline-block {
+    display: inline-block;
+}
+
+.vr_align_md{
+    vertical-align: middle;
+}

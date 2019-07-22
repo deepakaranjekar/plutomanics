@@ -1,15 +1,29 @@
-.firstLetter{
-    background: #bd3030;
-    border-radius: 100%;
-    height: 56px;
-    width: 56px;
-    text-align: center;
-    line-height: 2.2;
-    font-size: 25px;
-    font-weight: bold;
-    color: #fff;
+// .firstLetter{
+//     background: #bd3030;
+//     border-radius: 100%;
+//     height: 56px;
+//     width: 56px;
+//     text-align: center;
+//     line-height: 2.2;
+//     font-size: 25px;
+//     font-weight: bold;
+//     color: #fff;
+// }
+
+// .diplay-inline-block {
+//     display: inline-block;
+// }
+
+.fav_icon, .img-icon{
+    font-size: 20px;
 }
 
-.diplay-inline-block {
-    display: inline-block;
+.icon_lebal{
+    padding: 0 15px 0 3px; 
+    font-size: 16px;
+}
+
+.time_label{
+    color: #a5a1a1;
+    font-size: 12px;
 }

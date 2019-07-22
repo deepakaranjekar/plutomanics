@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { NavController } from '@ionic/angular';
+import { TradeCallaData } from '../../../user/user.model';
+import { UserService } from '../../user.service';
+
 
 @Component({
   selector: 'app-card-detail-view',
@@ -6,10 +11,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-detail-view.page.scss'],
 })
 export class CardDetailViewPage implements OnInit {
+  cardDetail: TradeCallaData;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private navCtrl: NavController,
+    private userService: UserService
+  ) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(paramMap => {
+      if (!paramMap.has('cardId')) {
+        this.navCtrl.navigateBack('/user/tradeCalls');
+        return;
+      }
+      this.cardDetail = this.userService.getSingleTradeCardData(paramMap.get('cardId'));
+    });
   }
 
 }
