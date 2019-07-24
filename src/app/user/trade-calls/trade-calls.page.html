@@ -2,12 +2,19 @@
   <ion-toolbar>
     <ion-title>Plutomanics</ion-title>
     <ion-buttons slot="end">
+      <ion-button *ngIf="!detailView" (click)="switchToConciseView()">
+        <ion-icon name="apps"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="detailView" (click)="switchToConciseView()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
       <ion-button>
         <ion-icon name="funnel"></ion-icon>
       </ion-button>
       <ion-button>
         <ion-icon name="search"></ion-icon>
       </ion-button>
+
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -21,10 +28,10 @@
   </ion-refresher>
   <ion-item>
     <ion-label>Today</ion-label>
-    <a (click)="switchToConciseView()">
+    <!-- <a (click)="switchToConciseView()">
       <ion-icon class="img-icon" *ngIf="!detailView" color="medium" slot="end" name="apps"></ion-icon>
       <ion-icon class="img-icon" *ngIf="detailView" color="medium" slot="end" name="menu"></ion-icon>
-    </a>
+    </a> -->
   </ion-item>
   <ion-grid>
     <ion-row>
