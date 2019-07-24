@@ -25,7 +25,9 @@ export class CardDetailViewPage implements OnInit {
         this.navCtrl.navigateBack('/user/tradeCalls');
         return;
       }
-      this.cardDetail = this.userService.getSingleTradeCardData(paramMap.get('cardId'));
+      this.userService.getSingleTradeCardData(paramMap.get('cardId'))
+        .subscribe((response: TradeCallaData) => this.cardDetail = response);
+      ;
     });
   }
 
