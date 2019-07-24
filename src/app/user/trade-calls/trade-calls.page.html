@@ -22,8 +22,8 @@
   <ion-item>
     <ion-label>Today</ion-label>
     <a (click)="switchToConciseView()">
-      <ion-icon *ngIf="!detailView" color="medium" slot="end" name="apps"></ion-icon>
-      <ion-icon *ngIf="detailView" color="medium" slot="end" name="menu"></ion-icon>
+      <ion-icon class="img-icon" *ngIf="!detailView" color="medium" slot="end" name="apps"></ion-icon>
+      <ion-icon class="img-icon" *ngIf="detailView" color="medium" slot="end" name="menu"></ion-icon>
     </a>
   </ion-item>
   <ion-grid>
