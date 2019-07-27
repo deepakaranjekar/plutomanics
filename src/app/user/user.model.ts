@@ -9,5 +9,5 @@ export class TradeCallaData {
         public favoriteCount: number,
         public isRead: boolean,
         public time: string,
-    ) {}
+    ) { }
 }
