@@ -31,10 +31,16 @@
                   </ion-row>
 
                 </ion-card-header>
+                <div>
+                    <!-- <ion-img [src]='cardDetail?.imageUrl'></ion-img> -->
+                    <ion-slides pager="true" [options]="slideOpts" *ngFor="let imgURL of cardDetail?.imageUrl">
+                        <ion-slide>
+                            <ion-img [src]='imgURL'></ion-img>
+                        </ion-slide>
+                    </ion-slides>
+                </div>
                 <ion-card-content>
-                  <div>
-                      <ion-img [src]='cardDetail?.imageUrl'></ion-img>
-                  </div>
+                  
                         
                   <div class="ion-padding-vertical">
                       {{ cardDetail?.description}}
