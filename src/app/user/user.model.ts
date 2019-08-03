@@ -4,7 +4,7 @@ export class TradeCallaData {
         public title: string,
         public subtitle: string,
         public description: string,
-        public imageUrl: string,
+        public imageUrl: string[],
         public imageCount: number,
         public favoriteCount: number,
         public isRead: boolean,
