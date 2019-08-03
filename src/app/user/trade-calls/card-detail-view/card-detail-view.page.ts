@@ -12,6 +12,12 @@ import { UserService } from '../../user.service';
 })
 export class CardDetailViewPage implements OnInit {
   cardDetail: TradeCallaData;
+  math = Math;
+
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400
+  };
 
   constructor(
     private route: ActivatedRoute,

@@ -27,3 +27,11 @@
     color: #a5a1a1;
     font-size: 12px;
 }
+
+.cardTxtEllipsis{
+  margin: 0 0 16px 0;
+  -webkit-box-orient: vertical !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  overflow: hidden !important;
+}

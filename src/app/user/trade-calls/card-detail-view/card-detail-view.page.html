@@ -16,7 +16,7 @@
                 <ion-card-header>
                   <ion-row>
                     <ion-col size="12" no-padding>  
-                        <ion-item no-lines no-padding>
+                        <ion-item lines="none" no-padding>
                           <ion-thumbnail slot="start">
                             <div class="firstLetter">
                                 {{cardDetail?.title.charAt(0)}}
@@ -31,10 +31,16 @@
                   </ion-row>
 
                 </ion-card-header>
+                <div>
+                    <!-- <ion-img [src]='cardDetail?.imageUrl'></ion-img> -->
+                    <ion-slides pager="true" [options]="slideOpts">
+                        <ion-slide *ngFor="let imgURL of cardDetail?.imageUrl">
+                            <ion-img [src]='imgURL'></ion-img>
+                        </ion-slide>
+                    </ion-slides>
+                </div>
                 <ion-card-content>
-                  <div>
-                      <ion-img [src]='cardDetail?.imageUrl'></ion-img>
-                  </div>
+                  
                         
                   <div class="ion-padding-vertical">
                       {{ cardDetail?.description}}
