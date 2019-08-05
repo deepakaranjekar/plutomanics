@@ -55,9 +55,10 @@
       <ion-icon class="img-icon" *ngIf="detailView" color="medium" slot="end" name="menu"></ion-icon>
     </a> -->
   </ion-item>
+
   <ion-grid>
     <ion-row>
-      <ion-col *ngFor="let card of tradCallsObj; let i = index">
+      <ion-col [sizeLg]=3 [sizeSm]=12 *ngFor="let card of tradCallsObj; let i = index">
         <ion-card>
           <ion-card-header>
             <ion-row [routerLink]="['/','user','tradeCalls',card?.id]">
@@ -65,7 +66,7 @@
                 <ion-item lines="none" no-padding>
                   <ion-thumbnail slot="start">
                     <div class="firstLetter">
-                      <!-- [style.backgroundColor]="'#' + math.random().toString(16).slice(2, 8)" -->
+                      <!-- [style.backgroundColor]="random_bg_color()"-->
                       {{ card?.title.charAt(0) }}
                     </div>
                   </ion-thumbnail>
@@ -86,30 +87,19 @@
               {{ card?.description}}
             </div>
 
-            <ion-row>
+            <ion-row class="card-footer">
               <ion-col size='8' no-padding>
-                <ion-label class="diplay-inline-block">
-                  <span class="diplay-inline-block vr_align_md">
-                    <ion-icon class="fav_icon" slot="start" name="star"></ion-icon>
-                  </span>
-                  <span class="icon_lebal">{{ card?.favoriteCount}}</span>
-                </ion-label>
-
-                <ion-label class="diplay-inline-block">
-                  <span class="diplay-inline-block vr_align_md">
-                    <ion-icon class="img-icon" slot="start" name="images"></ion-icon>
-                  </span>
-                  <span class="icon_lebal">
-                    {{ card?.imageCount}}
-                  </span>
-
-                </ion-label>
+                <div class="footer-info">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-text class="space-left-5">{{ card?.favoriteCount}}</ion-text>
+                    <ion-icon name="images" class="space-left-10"></ion-icon>
+                    <ion-text class="space-left-5">{{ card?.imageCount}}</ion-text>
+                </div>
               </ion-col>
-              <ion-col size="4" text-right>
-                <ion-label class="time_label">{{ card?.time}}</ion-label>
+              <ion-col size="4" no-padding>
+                <ion-text class="footer-info time_label_color" float-right>{{ card?.time}}</ion-text>
               </ion-col>
             </ion-row>
-
           </ion-card-content>
         </ion-card>
 

@@ -14,8 +14,6 @@ export class TradeCallsPage implements OnInit {
   fakeTradCard: Array<any> = new Array(10);
   tradCallsObj: TradeCallaData[];
   detailView = true;
-  math = Math;
-
 
 
   constructor(
@@ -69,5 +67,13 @@ export class TradeCallsPage implements OnInit {
   switchToConciseView() {
     this.detailView = !this.detailView;
   }
+
+  random_bg_color() {
+    let x = Math.floor(Math.random() * 256),
+        y = Math.floor(Math.random() * 256),
+        z = Math.floor(Math.random() * 256),
+        bgColor = 'rgb(' + x + ',' + y + ',' + z + ')';
+    return bgColor;
+    }
 
 }

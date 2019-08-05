@@ -1,0 +1,29 @@
+::ng-deep .card-footer{
+    .footer-info{
+        display: flex;
+        align-items: center;
+    }
+    .space-left-5{
+        margin-left: 5px;
+    }    
+    .space-left-10{
+        margin-left: 15px;
+    }    
+    .time_label_color{
+        color: #a5a1a1;
+        font-size: 12px;
+        height: 21px;
+    }
+}
+
+::ng-deep .firstLetter{
+    background: #e65100;
+    border-radius: 100%;
+    height: 56px;
+    width: 56px;
+    text-align: center;
+    line-height: 2.2;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+}
