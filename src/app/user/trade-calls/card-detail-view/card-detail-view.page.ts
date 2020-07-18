@@ -33,7 +33,6 @@ export class CardDetailViewPage implements OnInit {
       }
       this.userService.getSingleTradeCardData(paramMap.get('cardId'))
         .subscribe((response: TradeCallaData) => this.cardDetail = response);
-      ;
     });
   }
 
